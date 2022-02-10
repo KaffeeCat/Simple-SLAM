@@ -17,6 +17,8 @@ cv2.imshow("ORB features", image)
 cv2.waitKey(1)
 ```
 
+![img](https://pic1.zhimg.com/80/v2-c75733bd4cfaca2d7267370996d1141c_720w.jpg)
+
 ## 第二步：对 ![[公式]](https://www.zhihu.com/equation?tex=t_1) 和 ![[公式]](https://www.zhihu.com/equation?tex=t_2) 时刻的ORB关键点计算匹配关系
 
 ORB关键点的描述子是二进制串，这里我们可以选择使用NORM_HAMMING距离和Brute force方式进行求解
@@ -35,6 +37,8 @@ matchImage = cv2.drawMatches(frame1, keypoints1, frame2, keypoints2, matches[:10
 cv2.imshow('Data association', matchImage)
 cv2.waitKey()
 ```
+
+![img](https://pic1.zhimg.com/80/v2-0f269b69424e17bf0a9f41c4d6187e68_720w.jpg)
 
 ## 第三步：通过不同时间采样的关键点进行定位和建图
 
@@ -122,3 +126,5 @@ ax.scatter(landmark_trajectory_points[:, [0]], landmark_trajectory_points[:, [1]
 ax.scatter(camera_trajectory_points[:, [0]], camera_trajectory_points[:, [1]], camera_trajectory_points[:, [2]], c='r')
 plt.show()
 ```
+
+![img](https://pic3.zhimg.com/80/v2-e95c8f03d944cb24e061be734f6b6db2_720w.jpg)
