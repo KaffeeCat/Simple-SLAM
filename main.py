@@ -132,7 +132,7 @@ class SimpleSLAM:
 
 if __name__ == '__main__':
 
-    cap = cv2.VideoCapture("video/drive_1.mp4")
+    cap = cv2.VideoCapture("video/drive.mp4")
     slam = SimpleSLAM(width=800, height=600, fov=60)
     frame_index = 0
     frame_interval = 10
